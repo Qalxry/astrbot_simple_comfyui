@@ -19,27 +19,11 @@ img_path = os.path.join(current_directory, 'output', 'temp.png')
 class ComfyUIPlugin(Star):
     def __init__(self, context: Context, config: dict):
         super().__init__(context)
-        # self.config = config
         client_id = str(uuid.uuid4())
         try:
             self.comfy_ui = ComfyUI(config, client_id)
         except Exception:
             logger.error(f"【初始化 ComfyUI Websocket 客户端失败，请注意是否已开启 ComfyUI 服务端】")
-
-    # @filter.command("img")
-    # async def helloworld(self, event: AstrMessageEvent):
-    #     '''通过 /img 指令调用本地启动的ComfyUI服务实现文生图功能'''
-    #     # user_name = event.get_sender_name()
-    #     # message_str = event.message_str # 用户发的纯文本消息字符串
-    #     # message_chain = event.get_messages() # 用户所发的消息的消息链 # from astrbot.api.message_components import *
-    #     # logger.info(message_chain)
-    #     # yield event.plain_result(f"Hello, {user_name}, 你发了 {message_str}!") # 发送一条纯文本消息
-    #     print(event.message_str)
-    #     img = self.comfy_ui.text_2_img(event.message_str)
-    #     chain = [
-    #         Image.fromBytes(img)
-    #     ]
-    #     yield event.chain_result(chain)
 
     async def initialize(self):
         self.context.activate_llm_tool("comfyui_txt2img")
