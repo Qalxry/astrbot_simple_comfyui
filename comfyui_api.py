@@ -11,7 +11,7 @@ current_file_path = os.path.abspath(__file__)
 # 获取当前文件所在目录的绝对路径
 current_directory = os.path.dirname(current_file_path)
 # comfyui工作流文件所在目录
-workflow_file_path = os.path.join(current_directory, 'workflow', 'workflow_api_demo.json')
+workflow_file_path = os.path.join(current_directory, 'workflow', 'workflow_api.json')
 
 
 class ComfyUI:
