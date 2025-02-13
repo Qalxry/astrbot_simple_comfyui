@@ -14,7 +14,7 @@ pip install websocket-client==1.8.0
 3、下载安装并启动 [ComfyUI](https://github.com/comfyanonymous/ComfyUI) 服务，同时打开 ComfyUI 服务的开发者模式
 ![img_1.png](assets/img_1.png)
 
-4、创建一个 ComfyUI 工作流，并将工作流保存为 json 文件，且文件命名必须为 `workflow_api.json`, 然后将文件放到该插件的 `astrbot_plugin_comfyui/workflow` 目录下
+4、创建一个 ComfyUI 工作流，并将工作流保存为 json 文件，且文件命名必须为 `workflow_api.json`， 然后将文件放到该插件的 `astrbot_plugin_comfyui/workflow` 目录下
 ![img_1.png](assets/img_4.png)
 
 5、对插件进行配置
