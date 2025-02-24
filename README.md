@@ -17,6 +17,23 @@ pip install websocket-client==1.8.0
 4、创建一个 ComfyUI 工作流，并将工作流保存为 json 文件，且文件命名必须为 `workflow_api.json`， 然后将文件放到该插件的 `astrbot_plugin_comfyui/workflow` 目录下
 ![img_1.png](assets/img_4.png)
 
+同时在该 json 文件的最后加一个节点，用于保存当前工作流生成的图片
+```json
+"save_image_websocket_node": {
+        "class_type": "SaveImageWebsocket",
+        "inputs": {
+            "images": [
+                "8",
+                0
+            ]
+        }
+    }
+```
+
+![img.png](assets/img6.png)
+
+
+
 5、对插件进行配置
 
 * 其中 `server_address` 为 ComfyUI 服务的IP地址、端口，默认为 `127.0.0.1:8188`
